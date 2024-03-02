@@ -66,10 +66,14 @@
             var username=document.getElementById("username").value;
             var p_reg=/^[A-Z][a-z]*[0-9]*[@$#]([A-Za-z0-9])*$/g;
             var u_reg=/^[A-Za-z_]*$/g;
-            if(username=="" && pass=="")
+            if(username=="")
             {
                 document.getElementById("alt1").style.color="#DC3545";
                 document.getElementById("alt1").innerHTML="username should not be empty";
+                
+            }
+            else if(pass=="")
+            {
                 document.getElementById("alt2").style.color="#DC3545";
                 document.getElementById("alt2").innerHTML="password should not be empty";
             }
