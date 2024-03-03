@@ -8,22 +8,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <div class="container rounded shadow-lg p-3 mt-5 w-sm-50">
-        <h2 class="h1 text-center"><span class="badge h1 bg-primary shadow ">Login <i class="fa fa-arrow-right-to-bracket"></i></span></h2>
-        <form action="">
+    <div class="container rounded shadow-lg p-3 mt-3 w-sm-50">
+        <form action="" class="card shadow-lg">
+            <h2 class="h1 text-center"><span class="badge h1 bg-primary shadow mt-5">Login <i class="fa fa-arrow-right-to-bracket"></i></span></h2>
             <div class="row mt-5 text-center">
                 <div class="col-sm-3 ">
                     <label class="h3">Username <i class="fa fa-user fs-4 text-primary"></i></label>
                 </div>
                 <div class="col-md-9 text-center">
-                    <input type="text" class="fs-4 w-75  rounded" id="username" placeholder="Enter your username"></input>
+                    <input type="text" class="fs-4 w-75  rounded shadow" id="username" placeholder="Enter your username"></input>
                 </div>
                 <div class="form-text fs-6 mt-1">
                     <p id="alt1"></p>
                 </div>
-        
             </div>
-            <div id="passwordHelpBlock" class="form-text fs-5   text-center">
+            <div id="passwordHelpBlock" class="form-text fs-5    text-center">
                 Your username must contain alphabets (case-insensitive) and underscore only.
             </div>
             <div class="row mt-5 text-center">
@@ -31,7 +30,7 @@
                     <label class="h3 form-label">Password <i class="fa fa-lock fs-4 text-primary"></i></label>
                 </div>
                 <div class="col-sm-9 ">
-                    <input type="text" class="fs-4 w-75  rounded" id="pass" aria-describedby="passwordHelpBlock" placeholder="Password">    
+                    <input type="text" class="fs-4 w-75  rounded shadow" id="pass" aria-describedby="passwordHelpBlock" placeholder="Password">    
                 </div>
                 <div class="form-text fs-6 mt-1 ">
                     <p id="alt2"></p>
@@ -53,7 +52,8 @@
                 <div class="col-sm-3 text-center">
                     <input type="button" class="btn btn-primary fs-4 text-center" onclick="RegExp()" value="submit">
                 </div>
-            </div>       
+            </div>
+            <br>       
         </form>
     </div>
 <br><br><br>
@@ -69,8 +69,7 @@
             if(username=="")
             {
                 document.getElementById("alt1").style.color="#DC3545";
-                document.getElementById("alt1").innerHTML="username should not be empty";
-                
+                document.getElementById("alt1").innerHTML="username should not be empty";   
             }
             else if(pass=="")
             {
@@ -117,7 +116,6 @@
                     document.getElementById("alt2").innerHTML="Wrong password pattern";
                 }
             }
-
         }
     </script>
 </body>
